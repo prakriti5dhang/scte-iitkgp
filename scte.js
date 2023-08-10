@@ -30,11 +30,11 @@ $(document).ready(function(){
 function canvas11() {
 canvas1 = document.getElementById("mycanvas1"),
 ctx1 = canvas1.getContext('2d'),
-transX = canvas1.width*0 , //21
-transY = canvas1.height * 1; //399
-ctx1.translate(transX, transY);
-ctx1.fillRect(0,-transY, 1, canvas1.height); //vertical Axis
-ctx1.fillRect( - transX, 0, canvas1.width, 1); //Horizantal Axis
+transX2 = canvas1.width*0 , //21
+transY2 = canvas1.height * 1; //399
+ctx1.translate(transX2, transY2);
+ctx1.fillRect(0,-transY2, 1, canvas1.height); //vertical Axis
+ctx1.fillRect( - transX2, 0, canvas1.width, 1); //Horizantal Axis
 canvas1.onmousemove = function(e) {
 var pos1 = getMousePos1(canvas1, e);
 //out.innerHTML = 'X:' + pos1.x + ' Y:' + pos1.y;
@@ -43,8 +43,8 @@ var pos1 = getMousePos1(canvas1, e);
 var coordinates = new Array();
 function getPosition1(event){
 var rect = canvas1.getBoundingClientRect();
-x = event.clientX - rect.left- transX;
-y = event.clientY - rect.top- transY;
+x = event.clientX - rect.left- transX2;
+y = event.clientY - rect.top- transY2;
 drawCoordinates(x,y);
 tabled();
 }
@@ -53,8 +53,8 @@ tabled();
 function getMousePos1(canvas1, evt) {
 var rect = canvas1.getBoundingClientRect();
 return {
-x: evt.clientX - (rect.left + 0.5) - transX,
-y: evt.clientY - rect.top - transY
+x: evt.clientX - (rect.left + 0.5) - transX2,
+y: evt.clientY - rect.top - transY2
        };
 }
 
@@ -121,8 +121,8 @@ if (table.rows.length <= 100)
 function reset(){
 ctx1.fillStyle = "black";
 ctx1.clearRect( 0, -400, canvas1.width, canvas1.height);
-ctx1.fillRect(0, - transY, 1, canvas1.height); //vertical Axis
-ctx1.fillRect( - transX, 0, canvas1.width, 1); //Horizantal Axis
+ctx1.fillRect(0, - transY2, 1, canvas1.height); //vertical Axis
+ctx1.fillRect( - transX2, 0, canvas1.width, 1); //Horizantal Axis
 var rowCount = table.rows.length;
 for (var j = rowCount -1; j >= 0; j--) {
 table.deleteRow(j);
