@@ -13,7 +13,7 @@ input::-webkit-inner-spin-button {
 }
 
 #table {
-    height: 600px;
+    height: 510px;
     overflow-y: auto;
 }
 
@@ -24,12 +24,12 @@ input::-webkit-inner-spin-button {
     background-color: #ffffff;
     border: 1.5px solid black;
     display: block;
-    max-width:  100%;
-    height: auto;
+  max-width:  100%;
+    height: auto; 
 
 }
 
-#mycanvas2 {
+/* #ChartContainer {
 
     background-repeat: no-repeat;
     background-position: center;
@@ -39,7 +39,7 @@ input::-webkit-inner-spin-button {
     max-width: 100%;
     height: auto;
 }
-
+ */
 .card {
     margin-bottom: 10px;
 }
